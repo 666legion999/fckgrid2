@@ -1,0 +1,290 @@
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    padding-left: 20%;
+    padding-right: 20%;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png)
+		repeat;
+}
+/*allstructure*/
+.wrapper{
+    display: grid;
+    grid-template-columns:80%, 20%;
+    grid-template-rows: 1fr;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+        "header header"
+        "leftmain rmain"
+        ". ."
+        "footer footer";
+}
+.header{
+    grid-area: header;
+    text-align: center;
+}
+.main{
+display: grid;
+grid-template-areas: 'leftmain rmain';
+grid-column-gap: 20px;
+}
+.leftmain{
+    grid-area: leftmain;
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.5fr 0.1fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    border-right: 1px solid black;
+    grid-template-areas: 
+        "b1 b1 b1 b1 b1 b1 b1 b1 b1 b1"
+        "b2 b2 b2 b2 b3 b3 b3 b4 b4 ."
+        "b5 b5 b7 b7 b7 b7 b7 b6 b6 . "
+        "b8 b8 b9 b9 b9 b9 b9 b9 b9 b9"
+        ". . . . . . . . . .";
+    border-bottom: 1px solid black;
+}
+.rightmain{
+    grid-area: rmain;
+}
+.footer{
+    grid-area: footer;
+}
+/*header*/
+.header h1{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 50px;
+}
+.data{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 4px double black;
+    border-top: 4px double black;
+    padding: 10px;
+}
+/*leftmain blocks*/
+.block1{
+    display: grid;
+    grid-area: b1;
+}
+.block1 img{
+    width: 20vw;
+}
+.block1 div{
+display: grid;
+  font-size: 16px; 
+    color: gray;
+     grid-template-columns: 200px 200px 300px;
+    grid-gap: 10px;
+}
+.block1 h1{
+    font-size: 40px;
+	font-style: italic;
+	text-align: left;
+	margin-bottom: 0.8rem;
+    font-family: 'Playfair Display', serif;
+}
+/*block2*/
+
+.block2{
+border-bottom: 1px solid black;
+    grid-area: b2;
+}
+.block2 h1{
+    font-size: 23px;
+}
+.block2 span{
+     font-size: 16px; 
+    color: gray;
+}
+/*block3*/
+
+.block3{
+    grid-area: b3;
+}
+/*block4*/
+
+.block4{
+    grid-area: b4;
+    font-size: 16px;
+    border-bottom: 1px solid black;
+}
+.block4 h1{
+    font-size: 23px;
+}
+.block4 span{
+     display: grid;
+  font-size: 16px; 
+    color: gray;
+}
+/*block5*/
+.block5{
+    grid-area: b5;
+}
+.block5 span{
+    color: gray;
+    font-size: 16px;
+}
+.block5 h1{
+    font-size: 23px;
+}
+/*block6*/
+.block6{
+    grid-area: b6;
+}
+.block6 span{
+    color: gray;
+    font-size: 16px;
+}
+.block6 h1{
+    font-size: 23px;
+}
+/*block7*/
+.block7{
+    grid-area: b7;
+}
+/*block8*/
+.block8{
+    grid-area: b8;
+}
+/*block9*/
+.block9{
+    grid-area: b9;
+    background-color: dimgray;
+}
+.text1block{
+    column-count: 2;
+    column-width: 200px;
+}
+.block9 span{
+    color: white;
+    background-color: gray;
+}
+.world{
+    background-color: gray;
+}
+/*rightmenu blocks*/
+.block14 h3{
+    font-style: italic;
+    font-family: monospace;
+    font-size: 20px;
+}
+.othertext{
+    background-color: slategray;
+    color: wheat;
+    padding: 13px;
+}
+.othertext p{
+    background-color: darkgrey;
+    font-size: 23px;
+    margin-top: -10px;
+}
+.othertext span{
+    font-size: 16px;
+}
+.block15 h4{
+    font-size: 20px;
+    text-align: center;
+}
+.block15 p{
+      font-size: 16px; 
+    color: gray;
+}
+.block15{
+    border-bottom: 1px solid black;
+}
+.block16 h4{
+     font-size: 20px;
+    text-align: center;
+}
+.block16 p{
+     font-size: 16px; 
+    color: gray;
+}
+.block17{
+    height: 280px;
+}
+.block17 img{
+      overflow: hidden;
+}
+.text17{
+    text-align: center;
+    background-color: dimgray;
+    color:wheat;
+    
+}
+.text17 a{
+    text-decoration-line: none;
+    color: wheat;
+    font-size: 20px;
+}
+/*footer*/
+.footer{
+    display: grid;
+    grid-template-areas: 
+        "fi fi fi fi h1 h1 h1 h1 h1 h1"
+         "fi fi fi fi ft ft ft ft ft ft"
+        "fi fi fi fi ft ft ft ft ft ft";
+        grid-column-gap: 20px;
+    grid-template-columns: 50px 50px 50px 50px;
+}
+.foottext{
+    column-count: 3;
+    column-width: 200px;
+}
+.foottext div{
+    display: grid;
+     font-size: 16px; 
+    color: gray;
+    grid-area: h1;
+}
+.foottext {
+    grid-area: ft;
+}
+.footimg{
+    grid-area: fi;
+}
+.footer h1{
+    grid-area: h1;
+    font-size: 25px;
+}
+/*hovers*/
+img{
+    filter: grayscale(99%); 
+}
+img:hover{
+     filter: grayscale(0%);
+     transition: filter .7s ease-in-out;
+}
+h1:hover{
+    background-color: black;
+    color:white;
+    transition: 1s;
+    cursor: pointer;
+}
+h4:hover{
+     background-color: black;
+    color:white;
+    transition: 1s;
+    cursor: pointer;
+}
+/*media*/
+@media screen and (max-width: 640px){
+    body{
+     margin: 0 auto;
+    }
+    .wrapper{
+     display: flex;
+        flex-direction: column;
+    }
+    .main, .rmain, .footer, .leftmain{
+       display: flex;
+    flex-direction: column;  
+    border-right: none;
+    }
+    .block1 div{
+        display: flex;
+        flex-direction: column;
+    }
+}
+    
