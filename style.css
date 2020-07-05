@@ -1,6 +1,8 @@
 *{
-    box-sizing: border-box;
-    
+    box-sizing: border-box;   
+}
+div{
+    box-sizing: content-box;
 }
 body{
     padding-left: 20%;
@@ -28,6 +30,8 @@ body{
 display: grid;
 grid-template-areas: 'leftmain rmain';
 grid-column-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 800px);
+  justify-content: center;
 }
 .leftmain{
     grid-area: leftmain;
@@ -67,14 +71,11 @@ grid-column-gap: 20px;
     display: grid;
     grid-area: b1;
 }
-.block1 img{
-    width: 20vw;
-}
 .block1 div{
 display: grid;
   font-size: 16px; 
     color: gray;
-     grid-template-columns: 200px 200px 300px;
+     grid-template-columns: 200px 200px 350px;
     grid-gap: 10px;
 }
 .block1 h1{
@@ -271,7 +272,8 @@ h4:hover{
 /*media*/
 @media screen and (max-width: 640px){
     body{
-     margin: 0 auto;
+     padding-left: 5%;
+    padding-right: 5%;
     }
     .wrapper{
      display: flex;
